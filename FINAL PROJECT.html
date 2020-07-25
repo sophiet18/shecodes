@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>All About Sleep</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #e9e0c9, #f2f0e8);
+      }
+      h1 {
+        text-align: center;
+        color: #db5550;
+        font-family: OCR A Std, monospace;
+      }
+      h2 {
+        color: #7f2652;
+        font-family: FreeMono, monospace;
+        line-height:30%;
+      }
+      .question {
+        color: #95389e;
+        font-family: FreeMono, monospace;
+        text-align: center;
+      }
+      p {
+        font-family: monospace;
+        color: #415030;
+        font-size: 15px;
+      }
+      span {
+        color: #184d47;
+        font-family: monospace;
+        font-size: 15px;
+      }
+      img {
+        margin: auto;
+        display: block;
+        max-width: 700px;
+      }
+      button {
+        display: block;
+        margin: auto;
+        font-family: verdana;
+        font-size: 25px;
+        color: #7c1111;
+        opacity: 0.5;
+        border-radius: 28px;
+        border: 0px;
+        padding: 5px 15px;
+        box-shadow: 2px 3px 2px;
+        transition: all 200ms ease;
+        font-family: Andale Mono, monospace;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        font-weight: 800;
+      }
+      footer {
+        color: #595238;
+        text-align: center;
+        font-weight: 800;
+        font-family: Arial Narrow, sans-serif;
+        margin: 2%;
+        padding: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Where's my snooze button❓</h1>
+    <h2>Sleep what sleep?</h2>
+    <p><strong>In short, it is a survival mechanism. </strong><br>According to the <a
+            href="https://www.sleepassociation.org/about-sleep/what-is-sleep/" target="blank">American Sleep Association</a>, sleep is when
+        our body repairs and replenishes itself even when we don't feel it. Just as we run on different time zones, our body
+        has its internal clocks (circadian rhythm) For example, growth hormone goes to work and spikes during our
+        sleep!</br></p>
+    <img src="https://www.sleepassociation.org/wp-content/uploads/ASA-What-is-Sleep-Supporting-2.jpg"
+        alt="SA Sleep Infographic">
+    <div>
+        <h2>The 4 stages of sleep💤</h2>
+    <p><strong>Non Rapid Eye Movement (NREM 1)</strong>
+        <br>
+        These are the initial 5-10 minutes when we tether between falling asleep and being awake. For some, it may not even
+        feel like sleeping! Since sleep stages are named after eye movements, the initial 3 stages are similar in that
+        regard but not entirely!
+        </br>
+    </p>
+    <p><strong>NREM 2</strong>
+        <br>This stage typically lasts for ~20 minutes. Here, body temperature, heart rate, and breathing gradually slows
+        down. Despite only lasting 20 minutes, one spends most of an entire night’s sleep here
+        </br>
+    </p>
+    <p><strong>NREM 3</strong>
+        <br>
+        This stage commences deep sleep. One becomes unresponsive to the environment and muscles are the most relaxed, it is
+        very hard to wake someone from this stage.
+        </br>
+    </p>
+    <p><strong>Rapid Eye Movement (REM)</strong>
+        <br>
+        Dream on! This is when dreaming occurs and when our muscles and brain become polar opposites - very relaxed and very
+        active respectively. Not only does our eyes move rapidly, our respiration and heart rates increase, too! As much as
+        our dreams may seem to last forever, this stage only takes up ~20% of our total sleep!
+        </br>
+    </p>
+    </div>
+    <span>Afterall,<strong>the quality of sleep is more important than the quantity</strong>. Nevertheless, less than 6
+        hours is generally insufficient. Don't forget, as our body rests, some parts of our body are hard at work as we
+        cycle through the stages. Sleep, so that you may go further!</span>
+    <hr> 
+       <h2 class = "question">So did you have enough sleep?</h2> 
+    <button>snooze😴</button>
+    </hr>
+    <footer>Coded by Sophie Tai</footer>
+  </body>
+  <script>    
+    function sleepCalc(){
+        let name = prompt("what is your name?");
+        let sleep = prompt("How many hours did you sleep last night, " + name + " ?");
+        let question = document.querySelector(".question");
+     if(sleep < 7){
+         question.innerHTML = "Goodnight, " + name ;
+         alert("Oops " + name + ", you need more Zs!");
+     } else { 
+        question.innerHTML = "Yay " + name + ", you have enough Zs!";  
+     }
+     }
+     let sleepButton = document.querySelector("button");
+     sleepButton.addEventListener("click",sleepCalc);
+  </script>
+</html>
